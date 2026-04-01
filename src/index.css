@@ -1,0 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #0c0e12;
+}
