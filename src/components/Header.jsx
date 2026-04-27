@@ -8,7 +8,7 @@ import { FaShoppingCart } from "react-icons/fa";
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <header className="fixed w-full text-primary bg-foreign  border-b left-0 border-accent">
+    <header className="fixed w-full text-primary bg-foreign  border-b left-0 border-accent z-99">
       <div className="flex justify-between p-4 items-center max-w-7xl mx-auto">
         <div>
           <Link to="/" className="font-bold text-accent text-xl">

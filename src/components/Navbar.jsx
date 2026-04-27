@@ -29,7 +29,7 @@ export const Navbar = ({ toogle }) => {
     <nav>
       <div>
         <ul
-          className={`${toogle ? "top-21" : "-translate-y-[150%] opacity-0"} flex gap-4 p-4 absolute flex-col md:flex-row md:static md:translate-y-0 md:opacity-100 bg-foreign w-full left-0 transtion duration-500 ease-in-out`}
+          className={`${toogle ? "top-21" : "-translate-y-[150%] opacity-0"} flex gap-4 p-4 absolute flex-col md:flex-row md:static md:translate-y-0 md:opacity-100 bg-foreign w-full left-0 transtion duration-500 ease-in-out `}
         >
           {menu.map((item, index) => (
             <li key={index}>

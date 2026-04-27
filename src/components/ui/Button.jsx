@@ -14,3 +14,11 @@ export const SecondaryButton = ({ children }) => {
     </button>
   );
 };
+
+export const SmallButton = ({ children }) => {
+  return (
+    <button className="cursor-pointer bg-slate-800 hover:bg-slate-800/70 text-white py-2 px-4 rounded-xl font-sans font-semibold text-xs">
+      {children}
+    </button>
+  );
+};
