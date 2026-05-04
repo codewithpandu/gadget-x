@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export const Home = () => {
   return (
-    <div className="py-24">
+    <div className="pt-24">
       <Hero />
       <div className="py-8">
         <FeaturedProduct />

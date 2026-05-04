@@ -2,6 +2,8 @@ import React from "react";
 import { SmallButton } from "./ui/Button";
 import { ProductCard } from "./ui/Card";
 
+import { products } from "../products";
+
 const FeaturedProduct = () => {
   return (
     <div className="mt-18">
@@ -18,9 +20,10 @@ const FeaturedProduct = () => {
         <SmallButton>Laptop</SmallButton>
         <SmallButton>Storage</SmallButton>
       </div>
-      <div className="mt-4 flex gap-2">
-        <ProductCard />
-        <ProductCard />
+      <div className="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {products.map((product, index) => (
+          <ProductCard data={product} key={index} />
+        ))}
       </div>
     </div>
   );

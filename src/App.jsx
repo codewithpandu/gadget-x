@@ -5,6 +5,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import Detail from "./pages/Detail";
 import Smartphone from "./pages/Smartphone";
+import { CartTab } from "./components/CartTab";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/smartphone" element={<Smartphone />} />
-          <Route path="product/:slug" element={<Detail />} />
+          <Route path="/product/:slug" element={<Detail />} />
         </Route>
       </Routes>
+      <CartTab />
     </BrowserRouter>
   );
 }
