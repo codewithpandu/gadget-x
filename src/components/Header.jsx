@@ -6,10 +6,14 @@ import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { toggleTab } from "../store/cart";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const carts = useSelector((state) => state.cart.items);
   const [isOpen, setOpen] = useState(false);
   const dispatch = useDispatch();
+
+  const totalChart = carts.reduce((acc, item) => acc + item.qty, 0);
 
   const openCart = () => {
     dispatch(toggleTab());
@@ -32,10 +36,13 @@ const Header = () => {
             <FaSearch />
           </div> */}
           <button
-            className="text-xl p-2 hover:bg-accent rounded-2xl cursor-pointer"
+            className="relative text-xl p-2 hover:bg-accent rounded-2xl cursor-pointer"
             onClick={openCart}
           >
             <FaShoppingCart />
+            <small className="absolute -translate-y-2 text-xs bg-red-500 px-1.5 rounded-full">
+              {totalChart}
+            </small>
           </button>
           <div className="hover:bg-accent rounded-2xl block md:hidden">
             <Hamburger toggled={isOpen} toggle={setOpen} size={18} />
