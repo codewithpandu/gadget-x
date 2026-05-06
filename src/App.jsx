@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import Smartphone from "./pages/Smartphone";
 import { CartTab } from "./components/CartTab";
 import { NotFound } from "./pages/404";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Route>
       </Routes>
+      <Footer />
       <CartTab />
     </BrowserRouter>
   );
