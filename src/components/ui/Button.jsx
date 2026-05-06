@@ -15,9 +15,12 @@ export const SecondaryButton = ({ children }) => {
   );
 };
 
-export const SmallButton = ({ children }) => {
+export const SmallButton = ({ children, ...props }) => {
   return (
-    <button className="cursor-pointer bg-slate-800 hover:bg-slate-800/70 text-white py-2 px-4 rounded-xl font-sans font-semibold text-xs">
+    <button
+      {...props}
+      className="cursor-pointer bg-slate-800 hover:bg-slate-800/70 text-white py-2 px-4 rounded-xl font-sans font-semibold text-xs focus:bg-accent"
+    >
       {children}
     </button>
   );

@@ -3,6 +3,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTab } from "../store/cart";
 import CartItem from "./CartItem";
+import RupiahCurrency from "../utils/RupiahCurrency";
+import { products } from "../products";
 
 export const CartTab = () => {
   const statusTab = useSelector((state) => state.cart.statusTab);
@@ -12,6 +14,11 @@ export const CartTab = () => {
   const closeCart = () => {
     dispatch(toggleTab());
   };
+
+  const totalProduct = carts.reduce((acc, item) => {
+    const product = products.find((product) => product.id === item.productId);
+    return acc + product.price * item.qty;
+  }, 0);
 
   return (
     <div
@@ -37,7 +44,7 @@ export const CartTab = () => {
       <div className="mt-2">
         <div className="flex justify-between">
           <small>Total</small>
-          <p className="font-bold">Rp 12.000.000</p>
+          <p className="font-bold">{RupiahCurrency(totalProduct)}</p>
         </div>
         <div className="pt-2">
           <button className="bg-accent w-full py-2 rounded-xl cursor-pointer hover:text-foreign">

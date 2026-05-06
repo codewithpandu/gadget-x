@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart";
 
 export const ProductCard = (props) => {
-  const { id, name, price, image, brand } = props.data;
+  const { id, name, price, image, brand, slug } = props.data;
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
@@ -15,7 +15,7 @@ export const ProductCard = (props) => {
 
   return (
     <Link
-      to=""
+      to={`/product/${slug}`}
       className="bg-background border border-white/20 w-full md:1/3 rounded-2xl overflow-hidden group"
     >
       <div className="overflow-hidden">

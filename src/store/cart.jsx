@@ -24,10 +24,33 @@ const cartSlice = createSlice({
       console.log(current(state.items));
     },
 
+    changeQty: (state, action) => {
+      const { productId, qty } = action.payload;
+      const findIndexProduct = state.items.findIndex(
+        (product) => product.productId === productId,
+      );
+
+      if (findIndexProduct >= 0) {
+        state.items[findIndexProduct].qty = qty;
+      }
+    },
+
+    deleteProductCart: (state, action) => {
+      const { productId } = action.payload;
+      const findIndexProduct = state.items.findIndex(
+        (product) => product.productId === productId,
+      );
+
+      if (findIndexProduct >= 0) {
+        state.items.splice(findIndexProduct, 1);
+      }
+    },
+
     toggleTab: (state) => {
       state.statusTab = !state.statusTab;
     },
   },
 });
-export const { toggleTab, addToCart } = cartSlice.actions;
+export const { toggleTab, addToCart, changeQty, deleteProductCart } =
+  cartSlice.actions;
 export default cartSlice.reducer;
