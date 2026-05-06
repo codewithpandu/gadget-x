@@ -22,7 +22,7 @@ export const ProductCard = (props) => {
         <img
           src={image}
           alt="product 1"
-          className="group-hover:scale-125 transition-transform duration-100 ease-in-out object-cover w-full h-72 md:h-80"
+          className="group-hover:scale-125 transition-transform duration-100 ease-in-out object-cover w-full h-52 md:h-80"
         />
       </div>
       <div className="p-2 h-28 md:h-20">
