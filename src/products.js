@@ -4,6 +4,7 @@ import product3 from "./assets/img/product/ultrabook.jpg";
 import product4 from "./assets/img/product/smartwatch.jpg";
 import product5 from "./assets/img/product/gamepad.jpg";
 import product6 from "./assets/img/product/camera.jpg";
+import product7 from "./assets/img/product/samsung.jpg";
 
 export const products = [
   {
@@ -96,5 +97,18 @@ export const products = [
     image: product6,
     description:
       "Kembalikan nuansa fotografi masa lalu dengan Retro Camera. Dirancang dengan gaya vintage yang elegan, kamera ini menghadirkan perpaduan antara estetika klasik dan teknologi modern. Cocok untuk pecinta fotografi, kolektor, maupun mereka yang ingin tampil beda.",
+  },
+  {
+    id: 7,
+    name: "Samsung Galaxy",
+    slug: "samsung-galaxy",
+    brand: "Samsung",
+    price: 4599000,
+    rating: 4.5,
+    reviews: 876,
+    image: product7,
+    description:
+      "Samsung hadir sebagai smartphone premium dengan desain elegan berbahan titanium yang ringan namun kokoh. Dibuat untuk memberikan performa maksimal sekaligus tampilan modern yang mewah.",
+    category: "smartphone",
   },
 ];
