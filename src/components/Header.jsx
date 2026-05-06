@@ -28,7 +28,7 @@ const Header = () => {
         </div>
 
         <div>
-          <Navbar toogle={isOpen} />
+          <Navbar toogled={isOpen} toogle={setOpen} />
         </div>
 
         <div className="flex justify-center items-center">

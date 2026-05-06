@@ -13,7 +13,7 @@ const Smartphone = () => {
           className="object-[10%] object-cover size-full"
         />
         <div className="absolute bg-linear-to-t from-background to-background/10 inset-0 z-10"></div>
-        <div className="absolute z-99 top-0 inset-0 translate-y-1/2 p-4">
+        <div className="absolute z-20 top-0 inset-0 translate-y-1/2 p-4">
           <Link to="/">
             <FaLongArrowAltLeft className="inline me-2" />
             Kembali
