@@ -22,7 +22,7 @@ export const CartTab = () => {
 
   return (
     <div
-      className={` ${statusTab ? "translate-x-0" : "translate-x-full"} transition duration-500 ease-in-out fixed top-0 right-0 z-99 w-100 text-white bg-foreign px-4 py-8 h-full grid grid-rows-[60px_1fr_60px]`}
+      className={` ${statusTab ? "translate-x-0" : "translate-x-full"} transition duration-500 ease-in-out fixed top-0 right-0 z-99 w-100 text-white bg-foreign px-4 pb-8 h-full grid grid-rows-[60px_1fr_60px]`}
     >
       <div className="flex justify-between items-center">
         <div className="flex gap-2 items-center">
