@@ -1,15 +1,26 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-export const PrimaryButton = ({ children }) => {
+export const PrimaryButton = ({ children, className }) => {
   return (
-    <button className="cursor-pointer bg-accent hover:bg-accent/70 py-3 px-6 rounded-xl text-black font-sans font-semibold">
+    <button
+      className={twMerge(
+        "cursor-pointer bg-accent hover:bg-accent/70 text-background py-3 px-6 rounded-xl font-sans font-semibold",
+        className,
+      )}
+    >
       {children}
     </button>
   );
 };
-export const SecondaryButton = ({ children }) => {
+export const SecondaryButton = ({ children, className }) => {
   return (
-    <button className="cursor-pointer bg-slate-800 hover:bg-slate-800/70 text-white py-3 px-6 rounded-xl font-sans font-semibold">
+    <button
+      className={twMerge(
+        "cursor-pointer bg-slate-800 hover:bg-slate-800/70 text-white py-3 px-6 rounded-xl font-sans font-semibold",
+        className,
+      )}
+    >
       {children}
     </button>
   );

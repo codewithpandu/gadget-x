@@ -5,6 +5,7 @@ import RupiahCurrency from "../utils/RupiahCurrency";
 import { FaCheckCircle } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/cart";
+import { NotFound } from "./404";
 
 const Detail = () => {
   const [detail, setDetail] = useState({});
@@ -21,6 +22,8 @@ const Detail = () => {
   };
 
   const product = products.find((product) => product.slug === slug);
+
+  if (!product) return <NotFound />;
 
   return (
     <section className="text-gray-600 body-font overflow-hidden md:mt-4">

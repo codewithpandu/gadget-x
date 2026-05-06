@@ -28,9 +28,9 @@ const Header = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <div className="text-xl p-2 hover:bg-accent rounded-2xl cursor-pointer">
+          {/* <div className="text-xl p-2 hover:bg-accent rounded-2xl cursor-pointer">
             <FaSearch />
-          </div>
+          </div> */}
           <button
             className="text-xl p-2 hover:bg-accent rounded-2xl cursor-pointer"
             onClick={openCart}

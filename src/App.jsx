@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import Detail from "./pages/Detail";
 import Smartphone from "./pages/Smartphone";
 import { CartTab } from "./components/CartTab";
+import { NotFound } from "./pages/404";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/smartphone" element={<Smartphone />} />
           <Route path="/product/:slug" element={<Detail />} />
+          <Route path="/*" element={<NotFound />} />
         </Route>
       </Routes>
       <CartTab />

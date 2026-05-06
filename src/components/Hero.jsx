@@ -17,7 +17,7 @@ export const Hero = () => {
           <p className="text-xs py-1 px-2 bg-accent/30 rounded-full border border-accent w-fit ">
             🔥 Promo Spesial — Diskon hingga 30%
           </p>
-          <h1 className="text-5xl md:text-6xl mt-8 font-bold">
+          <h1 className="text-3xl md:text-6xl mt-8 font-bold">
             Gadget Terbaru,
             <br />
             <span className="text-accent drop-shadow-xl drop-shadow-accent/30">
@@ -30,8 +30,12 @@ export const Hero = () => {
             smartphone hingga wearable, semua ada di sini.
           </p>
           <div className="mt-8 flex gap-4">
-            <PrimaryButton>Jelajahi Produk</PrimaryButton>
-            <SecondaryButton>Lihat Promo</SecondaryButton>
+            <PrimaryButton className="text-xs md:text-lg font-semibold">
+              Jelajahi Produk
+            </PrimaryButton>
+            <SecondaryButton className="text-xs md:text-lg font-semibold">
+              Lihat Promo
+            </SecondaryButton>
           </div>
         </div>
       </div>
