@@ -6,11 +6,17 @@ import { FaCheckCircle } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/cart";
 import { NotFound } from "./404";
+import { useLocation } from "react-router-dom";
 
 const Detail = () => {
   const [detail, setDetail] = useState({});
   const { slug } = useParams();
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const getProduct = products.filter((product) => product.slug === slug);
@@ -46,9 +52,9 @@ const Detail = () => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 text-indigo-500"
                   viewBox="0 0 24 24"
                 >
@@ -57,9 +63,9 @@ const Detail = () => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 text-indigo-500"
                   viewBox="0 0 24 24"
                 >
@@ -68,9 +74,9 @@ const Detail = () => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 text-indigo-500"
                   viewBox="0 0 24 24"
                 >
@@ -79,9 +85,9 @@ const Detail = () => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 text-indigo-500"
                   viewBox="0 0 24 24"
                 >
@@ -90,9 +96,9 @@ const Detail = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 text-indigo-500"
                   viewBox="0 0 24 24"
                 >
