@@ -5,6 +5,7 @@ import { toggleTab } from "../store/cart";
 import CartItem from "./CartItem";
 import RupiahCurrency from "../utils/RupiahCurrency";
 import { products } from "../products";
+import { checkoutCart } from "../store/cart";
 
 export const CartTab = () => {
   const statusTab = useSelector((state) => state.cart.statusTab);
@@ -13,6 +14,11 @@ export const CartTab = () => {
 
   const closeCart = () => {
     dispatch(toggleTab());
+  };
+
+  const handleCheckout = () => {
+    dispatch(checkoutCart());
+    closeCart();
   };
 
   const totalProduct = carts.reduce((acc, item) => {
@@ -47,7 +53,10 @@ export const CartTab = () => {
           <p className="font-bold">{RupiahCurrency(totalProduct)}</p>
         </div>
         <div className="pt-2">
-          <button className="bg-accent w-full py-2 rounded-xl cursor-pointer hover:text-foreign">
+          <button
+            onClick={handleCheckout}
+            className="bg-accent w-full py-2 rounded-xl cursor-pointer hover:text-foreign"
+          >
             Checkout Sekarang
           </button>
         </div>

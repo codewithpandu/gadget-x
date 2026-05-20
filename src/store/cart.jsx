@@ -50,11 +50,20 @@ const cartSlice = createSlice({
       }
     },
 
+    checkoutCart: (state) => {
+      state.items = [];
+    },
+
     toggleTab: (state) => {
       state.statusTab = !state.statusTab;
     },
   },
 });
-export const { toggleTab, addToCart, changeQty, deleteProductCart } =
-  cartSlice.actions;
+export const {
+  toggleTab,
+  addToCart,
+  changeQty,
+  deleteProductCart,
+  checkoutCart,
+} = cartSlice.actions;
 export default cartSlice.reducer;
